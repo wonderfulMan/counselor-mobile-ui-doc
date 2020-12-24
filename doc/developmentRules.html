@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>node版本 | counselor-mobile-ui</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    
+    <meta name="description" content="辅导猫前端开发全家桶">
+    
+    <link rel="preload" href="/counselor-mobile-ui-doc/assets/css/0.styles.e23eb58e.css" as="style"><link rel="preload" href="/counselor-mobile-ui-doc/assets/js/app.f0558ad6.js" as="script"><link rel="preload" href="/counselor-mobile-ui-doc/assets/js/2.884fe9ae.js" as="script"><link rel="preload" href="/counselor-mobile-ui-doc/assets/js/9.7300eb36.js" as="script"><link rel="prefetch" href="/counselor-mobile-ui-doc/assets/js/10.9e15ff6c.js"><link rel="prefetch" href="/counselor-mobile-ui-doc/assets/js/3.e48d6748.js"><link rel="prefetch" href="/counselor-mobile-ui-doc/assets/js/4.09fd2c39.js"><link rel="prefetch" href="/counselor-mobile-ui-doc/assets/js/5.fc791712.js"><link rel="prefetch" href="/counselor-mobile-ui-doc/assets/js/6.ffe6f60a.js"><link rel="prefetch" href="/counselor-mobile-ui-doc/assets/js/7.a55ecfc8.js"><link rel="prefetch" href="/counselor-mobile-ui-doc/assets/js/8.9c82637e.js">
+    <link rel="stylesheet" href="/counselor-mobile-ui-doc/assets/css/0.styles.e23eb58e.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/counselor-mobile-ui-doc/" class="home-link router-link-active"><!----> <span class="site-name">counselor-mobile-ui</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>介绍</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>开发规范</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/counselor-mobile-ui-doc/doc/developmentRules.html" aria-current="page" class="active sidebar-link">移动端开发指南</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/counselor-mobile-ui-doc/doc/developmentRules.html#node版本" class="sidebar-link">node版本</a></li><li class="sidebar-sub-header"><a href="/counselor-mobile-ui-doc/doc/developmentRules.html#新项目初始化" class="sidebar-link">新项目初始化</a></li></ul></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>组件</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>工具方法</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>如何开发</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="node版本"><a href="#node版本" class="header-anchor">#</a> node版本</h2> <p>首先需要安装node，建议选择使用nvm进行安装node，通过nvm来统一托管我们的node版本<br>
+在使用的时候只需要进行灵活调配node版本。</p> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>nvm安装教程可以参考如下教程：<a href="https://www.jianshu.com/p/ff6606db1ee4" target="_blank">nvm安装教程</a><br>
+如何使用nvm：<a href="https://github.com/nvm-sh/nvm" target="_blank">nvm官网</a></p></div> <ul><li>当按照以上步骤进行安装完毕后，全局命令行运行<code>nvm --version</code>，提示版本号信息即为安装成功。</li> <li>执行<code>nvm install 10.15.0</code>进行node@10.15.0的版本安装。</li> <li>以上操作在 nvm安装教程 中全部涉及。</li> <li>当node版本安装后记得全局设置一个node版本，全局命令行运行<code>node -v</code>，提示版本号信息即为全局node版本安装成功。</li></ul> <h2 id="新项目初始化"><a href="#新项目初始化" class="header-anchor">#</a> 新项目初始化</h2> <div class="custom-block warning"><p class="custom-block-title">WARNING</p> <p>以下所有步骤演示均使用vscode，所有人统一开发工具进行开发</p></div> <p>经过nvm以及node的安装后，开始初始化我们的项目：我们的项目是基于vue-cli的一个自定义preset进行初始化的，请保证全局或者当前目录下安装了vue-cli。</p> <div class="custom-block warning"><p class="custom-block-title">WARNING</p> <p>vue-cli的版本为3.3.0，当前3的大版本号都是可以进行初始化，4以上的版本没有经过测试！</p></div> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>全局安装以及vue-cli文档教程：<a href="https://cli.vuejs.org/zh/guide/installation.html" target="_blank">vue-cli官网</a>，具体问题可以进行查看</p></div> <h3 id="全局安装vue-cli"><a href="#全局安装vue-cli" class="header-anchor">#</a> 全局安装vue-cli</h3> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">npm</span> <span class="token function">install</span> -g @vue/cli
+<span class="token comment"># OR</span>
+<span class="token function">yarn</span> global <span class="token function">add</span> @vue/cli
+</code></pre></div><p>安装成功后全局命令行运行<code>vue --version</code>，提示版本号即为安装成功<br>
+新项目初始化下执行，即可在当前目录下新建我们预设好的preset</p> <div class="language-shell extra-class"><pre class="language-shell"><code>vue create --preset wonderfulMan/counselor-preset-mobile <span class="token builtin class-name">.</span> // 当前目录创建
+vue create --preset wonderfulMan/counselor-preset-mobile test-module // 当前目录创建test-module
+</code></pre></div><h3 id="局部安装vue-cli"><a href="#局部安装vue-cli" class="header-anchor">#</a> 局部安装vue-cli</h3> <p>我们推荐采用项目内安装来进行vue-cli的初始化，这样可以保证不同的版本不受全局影响<br>
+新建test文件夹，在当前目录打开命令行运行</p> <div class="language-shell extra-class"><pre class="language-shell"><code>npx vue@3.3.0 create --preset wonderfulMan/counselor-preset-mobile <span class="token builtin class-name">.</span> // 当前目录创建
+vue create --preset wonderfulMan/counselor-preset-mobile test-module // 当前目录创建test-module
+</code></pre></div><h3 id="初始化步骤"><a href="#初始化步骤" class="header-anchor">#</a> 初始化步骤</h3> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>在执行以上初始化命令时，请确保当前node版本为10以上</p></div> <p>以下已当前目录创建</p> <img src="/counselor-mobile-ui-doc/setup-01.png" alt="dock"> <p>选择<strong>y</strong>把当前目录作为工作目录，选择<strong>n</strong>退出初始化，等待vue-cli初始化项目，当
+显示以下信息，则表示初始化成功！</p> <img src="/counselor-mobile-ui-doc/setup-02.png" alt="dock"> <p>需要注意vscode编辑器是否禁用了vscode，如果出现以下标志请点击图中红色文字，根据弹窗提示开启eslint功能
+<img src="/counselor-mobile-ui-doc/setup-03.png" alt="dock"></p> <p>在当前工作根目录新建<code>.env</code>文件和<code>.env.development.local</code>文件</p> <p>.env文件内容如下</p> <div class="language-env extra-class"><pre class="language-text"><code>  VUE_APP_DEV_SERVER_MODULE=模块名称
+</code></pre></div><p>.env.development.loacl文件内容如下</p> <div class="language-env extra-class"><pre class="language-text"><code>VUE_APP_DEV_SERVER_PORT=本地服务端口（例如：80）
+VUE_APP_DEV_SERVER_TARGET=接口代理地址（例如：http://172.31.16.50:8082）
+VUE_APP_DEV_SERVER_MODULE=模块名称
+</code></pre></div><p>当前工作目录命令行运行</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">yarn</span> serve
+</code></pre></div><p>看到命令行如下显示，项目启动成功
+<img src="/counselor-mobile-ui-doc/setup-04.png" alt="dock"></p> <p>接下来需要进行下载counselor-mobile-ui和counselor-sdk进行本地link操作 （请联系前端同事获取权限，不然无法获取源码）</p> <p>首先从git上获取counselor-mobile-ui和counselor-sdk源代码后，vscode打开分别打开项目<br>
+在counselor-mobile-ui 和 counselor-sdk的根目录<code>yarn link</code>后，在当前项目内执行分别执行</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">yarn</span> <span class="token function">link</span> counselor-sdk-ui 
+<span class="token function">yarn</span> <span class="token function">link</span> counselor-sdk
+</code></pre></div><p>执行以上全部操作后一个新项目就可以开发了！</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/counselor-mobile-ui-doc/doc/description.html" class="prev">
+        说明
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/counselor-mobile-ui-doc/assets/js/app.f0558ad6.js" defer></script><script src="/counselor-mobile-ui-doc/assets/js/2.884fe9ae.js" defer></script><script src="/counselor-mobile-ui-doc/assets/js/9.7300eb36.js" defer></script>
+  </body>
+</html>

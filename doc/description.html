@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>说明 | counselor-mobile-ui</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    
+    <meta name="description" content="辅导猫前端开发全家桶">
+    
+    <link rel="preload" href="/counselor-mobile-ui-doc/assets/css/0.styles.e23eb58e.css" as="style"><link rel="preload" href="/counselor-mobile-ui-doc/assets/js/app.f0558ad6.js" as="script"><link rel="preload" href="/counselor-mobile-ui-doc/assets/js/2.884fe9ae.js" as="script"><link rel="preload" href="/counselor-mobile-ui-doc/assets/js/8.9c82637e.js" as="script"><link rel="prefetch" href="/counselor-mobile-ui-doc/assets/js/10.9e15ff6c.js"><link rel="prefetch" href="/counselor-mobile-ui-doc/assets/js/3.e48d6748.js"><link rel="prefetch" href="/counselor-mobile-ui-doc/assets/js/4.09fd2c39.js"><link rel="prefetch" href="/counselor-mobile-ui-doc/assets/js/5.fc791712.js"><link rel="prefetch" href="/counselor-mobile-ui-doc/assets/js/6.ffe6f60a.js"><link rel="prefetch" href="/counselor-mobile-ui-doc/assets/js/7.a55ecfc8.js"><link rel="prefetch" href="/counselor-mobile-ui-doc/assets/js/9.7300eb36.js">
+    <link rel="stylesheet" href="/counselor-mobile-ui-doc/assets/css/0.styles.e23eb58e.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/counselor-mobile-ui-doc/" class="home-link router-link-active"><!----> <span class="site-name">counselor-mobile-ui</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>介绍</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/counselor-mobile-ui-doc/doc/description.html" aria-current="page" class="active sidebar-link">说明</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/counselor-mobile-ui-doc/doc/description.html#背景" class="sidebar-link">背景</a></li><li class="sidebar-sub-header"><a href="/counselor-mobile-ui-doc/doc/description.html#组件库架构设计" class="sidebar-link">组件库架构设计</a></li><li class="sidebar-sub-header"><a href="/counselor-mobile-ui-doc/doc/description.html#组件库目录结构" class="sidebar-link">组件库目录结构</a></li></ul></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>开发规范</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>组件</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>工具方法</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>如何开发</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="说明"><a href="#说明" class="header-anchor">#</a> 说明</h1> <h2 id="背景"><a href="#背景" class="header-anchor">#</a> 背景</h2> <p>辅导猫业务快速发展的过程中，对于移动端整体进行了全面的重构，总结过去架构中的不合理性，性能问题、打包等多个问题，我们采用了vant2.0进行基于业务的二次封装来满足业务开发，vant作为移动端最受欢迎的ui组件库，有些良好的收缩、扩展等特性，基于此和交互设计师一起确定了ui的主基调以及交互行为，尝试修改了部分vant的样式来达到产品要求，共同完成了counselor-mobile-ui的开发</p> <h2 id="组件库架构设计"><a href="#组件库架构设计" class="header-anchor">#</a> 组件库架构设计</h2> <p>市面上大多数组件库都有着自己的架构模式，counselor-mobile-ui在设计之初需要解决如下问题</p> <ul><li>基于一个第三方组件库进行实现的同时如何避免重复打包问题，并且要满足组件库打包代码下和业务代码下只引入同一个vant版本的代码</li> <li>在内部组件、工具方法引用时，如何避免重复打包组件问题，需要保证开发模式下、生产模式下的快速开发问题</li> <li>在生产环境构建下如何无感知的进行版本升级而无需修改业务中的组件库版本</li> <li>到底是基于webpack进行构建还是基于rollup构建，在实现时需要考虑生产环境体积大小</li> <li>对于一个组件库开发环境来说，是否需要一个本地构建模式</li> <li>开发是采用render函数还是template，或者都支持</li> <li>样式到底是分离到独立的文件还是在vue文件中</li> <li>在app内部运行经常调用sdk方法应该如何注入等等问题</li></ul> <p>1.在选择打包工具上的问题上，前端的工具构建需要一些基础工具的支撑配合下才能更好的构建版本，基于体积、构建版本等等的选择，我们采用了rollup进行打包，并且对与重复打包问题进行了一定的处理来规避重复代码。</p> <p>2.在生产环境和开发环境中让开发人员无感知的同步完成开发，并且无需关心业务中的组件构建形式，我们灵活的采用了babel-plugin-import这个插件来实现。</p> <p>3.在开发业务组件时，我们采用最小化原则，对于组件进行细致切分、通过组合的方式来实现复杂的需求，并且支持template/render函数的开发模式，同时也支持样式的分离或者在.vue文件中进行书写。</p> <p>4.构建版本上，我们优先使用esModule来投入生产环境中，并且支持cjs、umd等方式的引入</p> <p>5.通过构建counselor-sdk包来结合counselor-mobile-ui做到多端使用sdk功能</p> <h2 id="组件库目录结构"><a href="#组件库目录结构" class="header-anchor">#</a> 组件库目录结构</h2> <div class="language- extra-class"><pre class="language-text"><code>├── assest 静态资源
+├── build 生产环境脚本
+├── config 生产环境构建配置
+├── constant 公用常量
+├── directives 公用指令
+├── examples 本地开发测试组件库目录
+├── helper 组件库相关工具方法
+        ├── lib.js 生产环境工具方法
+        └── vue.dev.js 本地开发环境工具方法
+├── packages 组件库开发目录
+├── public 组件库本地开发资源文件
+        └── index.html
+├── styles 公用样式
+├── utils 公用方法
+        ├── feature 功能类
+        ├── modules 业务模块类
+        ├── ui 视图类
+        └── vue 框架类
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/counselor-mobile-ui-doc/doc/developmentRules.html">
+        移动端开发指南
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/counselor-mobile-ui-doc/assets/js/app.f0558ad6.js" defer></script><script src="/counselor-mobile-ui-doc/assets/js/2.884fe9ae.js" defer></script><script src="/counselor-mobile-ui-doc/assets/js/8.9c82637e.js" defer></script>
+  </body>
+</html>
